@@ -1,2 +1,2 @@
-# clone-practice
-for practicing cloning
+# practice
+for practicing purpose
