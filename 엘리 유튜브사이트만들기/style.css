@@ -1,0 +1,250 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    /* color */
+    --white-color:#fff;
+    --black-color:#000;
+    --blue-color:#00f;
+    --red-color:#f00;
+    --grey-dark-color:#909090;
+    --grey-light-color:#e0e0e0;
+    /* size */
+    --padding:12px;
+    --avatar-size:36px;
+    /* font-size */
+    --large:18px;
+    --medium:15px;
+    --small:13px;
+    --micro:10px;
+}
+button{
+    background-color: transparent;
+    border:none;
+    outline:none;
+}
+/* default setting end */
+header{
+    background-color:var(--blue-color);
+    display: flex;
+    height:30px;
+    /* position:fixed;
+    z-index:10;
+    width:100%; */
+}
+.fa-youtube{
+    color:var(--red-color);
+    padding-left:3px;
+}
+header .logo .title{
+    padding-left:5px;
+    color:var(--white-color);
+    font-size:var(--medium);
+    font-weight:900;
+    line-height:30px;
+}
+header .logo_icon{
+    position:absolute;
+    top:0;
+    right:0;
+    line-height:30px;
+}
+header .logo-icon i{
+    padding-right:var(--padding);
+    color:var(--white-color);
+}
+
+/* header end */
+
+.player{
+    text-align: center;
+    background-color: var(--black-color);
+    position:sticky;
+    top:0;
+}
+.player video{
+    width:100%;
+    height:100%;
+    max-height:350px;
+    max-width: 1000px;
+}
+
+/* player section end */
+.video_info_top{
+    display:flex;
+    flex-direction: row;
+}
+.video_info_top .hashtag{
+    display:flex;
+    flex-direction:row;
+    color:var(--blue-color);
+    font-size:var(--micro);
+    margin:3px;
+}
+.video_title{
+    font-size:var(--medium);
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow:hidden;
+    margin:5px 10px;
+}
+.views_info{
+    color:var(--grey-dark-color);
+    font-size:var(--micro);
+    margin-left:6px;
+}
+
+.info_left{
+    flex:1 95%;
+}
+.info_right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:1 5%;
+}
+
+/* info-top end */
+
+.video_info_action{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    justify-content:space-around;
+    border-bottom: 1px solid var(--grey-light-color);
+}
+.video_info_action li{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    margin:var(--padding) 0;
+}
+.video_info_action li i{
+    margin:0 auto;
+    margin-bottom:calc(var(--padding)/2);
+    font-size:12px;
+}
+.video_info_action li .action_icon{
+    color:var(--grey-dark-color);
+    font-size:var(--micro);
+}
+
+/* info action end */
+
+
+.video_personal_info{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--grey-light-color);
+}
+
+.img_and_metadata{
+    display:flex;
+    flex-direction: row;
+}
+
+.video_personal_info img{
+    margin:var(--padding);
+    width:var(--avatar-size);
+    height:var(--avatar-size);
+    border-radius: 50%;
+}
+
+.name_and_viewer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name_and_viewer .youtuber_name{
+   font-size: var(--small);
+}
+
+.name_and_viewer .viewers_number{
+    font-size:var(--micro);
+    color:var(--grey-dark-color);
+}
+
+.y_btn{
+    text-transform: uppercase;
+    font-size:var(--micro);  
+    color:var(--red-color);
+    font-weight: 700;
+}
+
+.upnext_top{
+    font-size: var(--small);
+    color:var(--grey-dark-color);
+    margin-bottom:cal(var(--padding)/2);
+}
+
+.upnext_item .item{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    
+}
+.upnext_item .img{
+    flex:1 1 35%;
+    margin:var(--padding);
+}
+.upnext .item .img img{
+    width:100%;
+    min-width:150px;
+}
+.title_content_view{
+    flex:1 1 60%;
+}
+.i_btn_box{
+    flex:1 1 5%;
+}
+.title, .content, .view{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: var(--small);
+}
+.title{
+    color:var(--black-color);
+    padding:var(--padding);
+}
+.content{
+    font-size:var(--micro);
+    min-width:120px;
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow:hidden;
+}
+.view{
+    color:var(--grey-dark-color);
+    font-size:var(--micro);
+}
+
+.info_and_upnext{
+    display:flex;
+    flex-direction: column;
+}
+
+@media all and (min-width:768px){
+    .info_and_upnext{
+        flex-direction:row;
+        margin:var(--padding) 0;
+    }
+    .video_info{
+          
+        flex:1 60%;
+    }
+    .upnext{
+        
+        flex:1 40%;
+    }
+}
